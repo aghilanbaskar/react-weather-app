@@ -14,7 +14,7 @@ jobs:
           HOST: ${{ secrets.SSH_HOST }}
           USERNAME: ${{ secrets.SSH_USERNAME }}
           PORT: 22
-          KEY: ${{ secrets.SSH_KEY }}
+          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         with:
           source: "*"
           target: "/var/www/dev.gradskey.com/html/website"
