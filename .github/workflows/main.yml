@@ -6,13 +6,18 @@ on:
 jobs:
   deploy:    
     runs-on: ubuntu-latest
+    name: build&deploy
     steps:
-      - uses: actions/checkout@v2
-      - name: Deploy source-code
+      # To use this repository's private action, you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Install Dependencies
         run: yarn
+        
       - name: Build
         run: yarn build
+
       - name: deploy file to server
         uses: wlixcc/SFTP-Deploy-Action@v1.0
         with:
