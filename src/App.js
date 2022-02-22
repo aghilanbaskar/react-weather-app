@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-          {(typeof data.main != 'undefined') ? (
+          {(!!data.main) ? (
             <Container>
               <Grid>
                 <Grid.Row>
